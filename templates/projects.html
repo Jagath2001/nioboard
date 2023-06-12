@@ -1,0 +1,94 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block content %}
+                <div class="nk-content">
+                    <div class="container">
+                        <div class="nk-content-inner">
+                            <div class="nk-content-body">
+                                <div class="nk-block-head">
+                                    <div class="nk-block-head-between flex-wrap gap g-2">
+                                        <div class="nk-block-head-content">
+                                            <h2 class="nk-block-title">Users Cards</h1>
+                                                <nav>
+                                                    <ol class="breadcrumb breadcrumb-arrow mb-0">
+                                                        <li class="breadcrumb-item"><a href="#">Home</a></li>
+                                                        <li class="breadcrumb-item"><a href="#">User Manage</a></li>
+                                                        <li class="breadcrumb-item active" aria-current="page">Users
+                                                        </li>
+                                                    </ol>
+                                                </nav>
+                                        </div>
+                                  
+                                    </div>
+                                </div>
+                                <div class="nk-block">
+                                    <div class="row g-gs">
+                                        {% for i in data %}
+                                        <div class="col-sm-6 col-xl-4 col-xxl-3">
+                                            <div class="card text-center h-100">
+                                                <div class="card-body">
+                                                    <div class="media media-xxl media-middle media-circle"><img
+                                                            src="../images/avatar/a.jpg" alt="user"></div>
+                                                    <div class="mt-1 mb-4"><a
+                                                            href="%40%40/URL/user-manage/user-profile.html"
+                                                            class="mb-1 h5">{{ i.Title }}</a>
+                                                        <div class="small">{{ i.Domain }}</div>
+                                                    </div>
+                                                    <div class="row g-gs justify-content-center">
+                                                        <div class="col-5">
+                                                            <div class="small">Guide</div>
+
+                                                            <div class="h5 mb-1">{{ i.Guide.Last_name }} {{ i.Guide.First_name }}</div>
+                                                        </div>
+                                                        <div class="col-5">
+                                                            <div class="small">Tech</div>
+
+                                                            <div class="h5 mb-1">{{ i.TechTechnology }}<span></span></div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="dropdown position-absolute top-0 end-0 p-3"><a href="#"
+                                                        class="btn btn-sm btn-icon btn-zoom"
+                                                        data-bs-toggle="dropdown"><em
+                                                            class="icon ni ni-more-v"></em></a>
+                                                    <div class="dropdown-menu dropdown-menu-sm dropdown-menu-end">
+                                                        <div class="dropdown-content py-1">
+                                                            <ul
+                                                                class="link-list link-list-hover-bg-primary link-list-md">
+                                                                <li><a href="user-edit.html"><em
+                                                                            class="icon ni ni-edit"></em><span>Edit</span></a>
+                                                                </li>
+                                                                <li><a href="user-edit.html"><em
+                                                                            class="icon ni ni-trash"></em><span>Delete</span></a>
+                                                                </li>
+                                                                <li><a href="user-profile.html"><em
+                                                                            class="icon ni ni-eye"></em><span>View
+                                                                            Details</span></a></li>
+                                                            </ul>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        {% endfor %}
+
+                                    </div>
+
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+              
+            </div>
+        </div>
+    </div>
+</body>
+<script src="../assets/js/bundle.js"></script>
+<script src="../assets/js/scripts.js"></script>
+
+<!-- Mirrored from html.nioboard.themenio.com/user-manage/user-cards.html by HTTrack Website Copier/3.x [XR&CO'2014], Fri, 09 Jun 2023 05:20:30 GMT -->
+
+</html>
+
+{% endblock %}
